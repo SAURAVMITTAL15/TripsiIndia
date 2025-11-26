@@ -6,6 +6,7 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { PlaceDetail } from './pages/PlaceDetail';
+import { Terms } from './pages/Terms';
 
 // Theme Context
 interface ThemeContextType {
@@ -50,6 +51,7 @@ export default function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/place/:id" element={<PlaceDetail />} />
+              <Route path="/terms" element={<Terms />} />
             </Routes>
           </main>
           <Footer />

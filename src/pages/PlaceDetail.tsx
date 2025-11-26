@@ -1,12 +1,14 @@
 import { useParams, Link } from 'react-router-dom';
-import { MapPin, Clock, Calendar, ChevronLeft, CheckCircle2 } from 'lucide-react';
+import { MapPin, Clock, Calendar, ChevronLeft, CheckCircle2, IndianRupee, X } from 'lucide-react';
 import { places } from '../data/places';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
 import { PlaceCard } from '../components/PlaceCard';
+import { useState } from 'react';
 
 export function PlaceDetail() {
   const { id } = useParams<{ id: string }>();
   const place = places.find((p) => p.id === id);
+  const [selectedPackage, setSelectedPackage] = useState<'standard' | 'deluxe' | 'luxury'>('standard');
 
   if (!place) {
     return (
@@ -111,6 +113,148 @@ export function PlaceDetail() {
                   <h3 className="text-gray-900 dark:text-white">Recommended Duration</h3>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300">{place.duration}</p>
+              </div>
+            </div>
+
+            {/* Package Pricing */}
+            <div className="mb-12">
+              <h2 className="text-gray-900 dark:text-white mb-6">Package Pricing</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div
+                  onClick={() => setSelectedPackage('standard')}
+                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
+                    selectedPackage === 'standard'
+                      ? 'border-orange-600 dark:border-orange-400 bg-orange-50 dark:bg-orange-900/20'
+                      : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-orange-300 dark:hover:border-orange-600'
+                  }`}
+                >
+                  <h3 className="text-gray-900 dark:text-white mb-2">Standard Package</h3>
+                  <div className="flex items-baseline mb-4">
+                    <IndianRupee className="w-5 h-5 text-orange-600 dark:text-orange-400" />
+                    <span className="text-gray-900 dark:text-white ml-1">{place.pricing.standard.toLocaleString()}</span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">per person</span>
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Perfect for budget-conscious travelers
+                  </p>
+                </div>
+
+                <div
+                  onClick={() => setSelectedPackage('deluxe')}
+                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
+                    selectedPackage === 'deluxe'
+                      ? 'border-orange-600 dark:border-orange-400 bg-orange-50 dark:bg-orange-900/20'
+                      : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-orange-300 dark:hover:border-orange-600'
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-gray-900 dark:text-white">Deluxe Package</h3>
+                    <span className="text-xs bg-orange-600 text-white px-2 py-1 rounded-full">Popular</span>
+                  </div>
+                  <div className="flex items-baseline mb-4">
+                    <IndianRupee className="w-5 h-5 text-orange-600 dark:text-orange-400" />
+                    <span className="text-gray-900 dark:text-white ml-1">{place.pricing.deluxe.toLocaleString()}</span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">per person</span>
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Enhanced comfort and amenities
+                  </p>
+                </div>
+
+                <div
+                  onClick={() => setSelectedPackage('luxury')}
+                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
+                    selectedPackage === 'luxury'
+                      ? 'border-orange-600 dark:border-orange-400 bg-orange-50 dark:bg-orange-900/20'
+                      : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-orange-300 dark:hover:border-orange-600'
+                  }`}
+                >
+                  <h3 className="text-gray-900 dark:text-white mb-2">Luxury Package</h3>
+                  <div className="flex items-baseline mb-4">
+                    <IndianRupee className="w-5 h-5 text-orange-600 dark:text-orange-400" />
+                    <span className="text-gray-900 dark:text-white ml-1">{place.pricing.luxury.toLocaleString()}</span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400 ml-2">per person</span>
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Premium experience with finest services
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 text-center">
+                <Link
+                  to="/terms"
+                  className="text-sm text-orange-600 dark:text-orange-400 hover:underline"
+                >
+                  View Terms & Conditions
+                </Link>
+              </div>
+            </div>
+
+            {/* Inclusions & Exclusions */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg">
+                <h3 className="text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400" />
+                  <span>Package Inclusions</span>
+                </h3>
+                <ul className="space-y-3">
+                  {place.inclusions.map((inclusion, index) => (
+                    <li key={index} className="flex items-start space-x-3">
+                      <CheckCircle2 className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700 dark:text-gray-300 text-sm">{inclusion}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-lg">
+                <h3 className="text-gray-900 dark:text-white mb-4 flex items-center space-x-2">
+                  <X className="w-5 h-5 text-red-600 dark:text-red-400" />
+                  <span>Package Exclusions</span>
+                </h3>
+                <ul className="space-y-3">
+                  {place.exclusions.map((exclusion, index) => (
+                    <li key={index} className="flex items-start space-x-3">
+                      <X className="w-5 h-5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700 dark:text-gray-300 text-sm">{exclusion}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Day-by-Day Itinerary */}
+            <div className="mb-12">
+              <h2 className="text-gray-900 dark:text-white mb-6">Detailed Itinerary</h2>
+              <div className="space-y-6">
+                {place.itinerary.map((day) => (
+                  <div
+                    key={day.day}
+                    className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-md border border-gray-200 dark:border-gray-700"
+                  >
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+                          <span className="text-orange-600 dark:text-orange-400">
+                            Day {day.day}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-gray-900 dark:text-white mb-2">{day.title}</h3>
+                        <p className="text-gray-600 dark:text-gray-400 mb-4">{day.description}</p>
+                        <div className="space-y-2">
+                          {day.activities.map((activity, index) => (
+                            <div key={index} className="flex items-start space-x-3">
+                              <div className="w-1.5 h-1.5 bg-orange-600 dark:bg-orange-400 rounded-full mt-2 flex-shrink-0" />
+                              <span className="text-sm text-gray-700 dark:text-gray-300">{activity}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 

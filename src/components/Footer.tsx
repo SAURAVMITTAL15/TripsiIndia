@@ -53,6 +53,14 @@ export function Footer() {
                   Destinations
                 </a>
               </li>
+              <li>
+                <Link
+                  to="/terms"
+                  className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
+                >
+                  Terms & Conditions
+                </Link>
+              </li>
             </ul>
           </div>
 

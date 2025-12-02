@@ -25,11 +25,11 @@ export function Home() {
           <ImageWithFallback
             src={currentPlace.image}
             alt={currentPlace.name}
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-fill opacity-40"
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent" />
-        
+
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl text-white">
             <h1 className="text-white mb-4">
@@ -80,11 +80,10 @@ export function Home() {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === currentSlide
-                  ? 'bg-white w-8'
-                  : 'bg-white/50 hover:bg-white/75'
-              }`}
+              className={`w-2 h-2 rounded-full transition-all ${index === currentSlide
+                ? 'bg-white w-8'
+                : 'bg-white/50 hover:bg-white/75'
+                }`}
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}

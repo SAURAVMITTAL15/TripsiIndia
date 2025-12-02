@@ -40,7 +40,7 @@ export function PlaceDetail() {
           className="w-full h-full object-cover opacity-70"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent" />
-        
+
         <div className="absolute bottom-0 left-0 right-0 p-8">
           <div className="container mx-auto">
             <Link
@@ -122,11 +122,10 @@ export function PlaceDetail() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div
                   onClick={() => setSelectedPackage('standard')}
-                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
-                    selectedPackage === 'standard'
+                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${selectedPackage === 'standard'
                       ? 'border-orange-600 dark:border-orange-400 bg-orange-50 dark:bg-orange-900/20'
                       : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-orange-300 dark:hover:border-orange-600'
-                  }`}
+                    }`}
                 >
                   <h3 className="text-gray-900 dark:text-white mb-2">Standard Package</h3>
                   <div className="flex items-baseline mb-4">
@@ -141,11 +140,10 @@ export function PlaceDetail() {
 
                 <div
                   onClick={() => setSelectedPackage('deluxe')}
-                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
-                    selectedPackage === 'deluxe'
+                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${selectedPackage === 'deluxe'
                       ? 'border-orange-600 dark:border-orange-400 bg-orange-50 dark:bg-orange-900/20'
                       : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-orange-300 dark:hover:border-orange-600'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-gray-900 dark:text-white">Deluxe Package</h3>
@@ -163,11 +161,10 @@ export function PlaceDetail() {
 
                 <div
                   onClick={() => setSelectedPackage('luxury')}
-                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${
-                    selectedPackage === 'luxury'
+                  className={`cursor-pointer rounded-lg p-6 border-2 transition-all ${selectedPackage === 'luxury'
                       ? 'border-orange-600 dark:border-orange-400 bg-orange-50 dark:bg-orange-900/20'
                       : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-orange-300 dark:hover:border-orange-600'
-                  }`}
+                    }`}
                 >
                   <h3 className="text-gray-900 dark:text-white mb-2">Luxury Package</h3>
                   <div className="flex items-baseline mb-4">
@@ -262,6 +259,10 @@ export function PlaceDetail() {
             <div className="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg">
               <h3 className="text-gray-900 dark:text-white mb-4">Travel Tips</h3>
               <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+                <li className="flex items-start space-x-2">
+                  <span className="text-orange-600 dark:text-orange-400 mt-1">•</span>
+                  <span>Government ID (original & photocopy)</span>
+                </li>
                 <li className="flex items-start space-x-2">
                   <span className="text-orange-600 dark:text-orange-400 mt-1">•</span>
                   <span>Book accommodations in advance, especially during peak season</span>

@@ -15,39 +15,37 @@ export function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center space-x-2">
-            <span className="text-orange-600 dark:text-orange-400">✈️</span>
-            <span className="text-gray-900 dark:text-white">tripsiIndia</span>
+            <img src="../../public/images/tripsiindiaLogo.jpg" alt="logo" className="w-10 h-8" />
+            {/* <span className="text-orange-600 dark:text-orange-400">✈️</span>
+            <span className="text-gray-900 dark:text-white">tripsiIndia</span> */}
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link
               to="/"
-              className={`transition-colors ${
-                isActive('/')
-                  ? 'text-orange-600 dark:text-orange-400'
-                  : 'text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400'
-              }`}
+              className={`transition-colors ${isActive('/')
+                ? 'text-orange-600 dark:text-orange-400'
+                : 'text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400'
+                }`}
             >
               Home
             </Link>
             <Link
               to="/about"
-              className={`transition-colors ${
-                isActive('/about')
-                  ? 'text-orange-600 dark:text-orange-400'
-                  : 'text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400'
-              }`}
+              className={`transition-colors ${isActive('/about')
+                ? 'text-orange-600 dark:text-orange-400'
+                : 'text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400'
+                }`}
             >
               About
             </Link>
             <Link
               to="/contact"
-              className={`transition-colors ${
-                isActive('/contact')
-                  ? 'text-orange-600 dark:text-orange-400'
-                  : 'text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400'
-              }`}
+              className={`transition-colors ${isActive('/contact')
+                ? 'text-orange-600 dark:text-orange-400'
+                : 'text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400'
+                }`}
             >
               Contact
             </Link>
@@ -86,33 +84,30 @@ export function Header() {
               <Link
                 to="/"
                 onClick={() => setMenuOpen(false)}
-                className={`transition-colors ${
-                  isActive('/')
-                    ? 'text-orange-600 dark:text-orange-400'
-                    : 'text-gray-700 dark:text-gray-300'
-                }`}
+                className={`transition-colors ${isActive('/')
+                  ? 'text-orange-600 dark:text-orange-400'
+                  : 'text-gray-700 dark:text-gray-300'
+                  }`}
               >
                 Home
               </Link>
               <Link
                 to="/about"
                 onClick={() => setMenuOpen(false)}
-                className={`transition-colors ${
-                  isActive('/about')
-                    ? 'text-orange-600 dark:text-orange-400'
-                    : 'text-gray-700 dark:text-gray-300'
-                }`}
+                className={`transition-colors ${isActive('/about')
+                  ? 'text-orange-600 dark:text-orange-400'
+                  : 'text-gray-700 dark:text-gray-300'
+                  }`}
               >
                 About
               </Link>
               <Link
                 to="/contact"
                 onClick={() => setMenuOpen(false)}
-                className={`transition-colors ${
-                  isActive('/contact')
-                    ? 'text-orange-600 dark:text-orange-400'
-                    : 'text-gray-700 dark:text-gray-300'
-                }`}
+                className={`transition-colors ${isActive('/contact')
+                  ? 'text-orange-600 dark:text-orange-400'
+                  : 'text-gray-700 dark:text-gray-300'
+                  }`}
               >
                 Contact
               </Link>

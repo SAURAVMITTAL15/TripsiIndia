@@ -278,14 +278,14 @@ export function Terms() {
                   href="mailto:info@tripsiindia.com"
                   className="text-orange-600 dark:text-orange-400 hover:underline"
                 >
-                  info@tripsiindia.com
+                  Tripsiindia@gmail.com
                 </a>
                 <span className="text-gray-400 hidden sm:inline">|</span>
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+8126499143"
                   className="text-orange-600 dark:text-orange-400 hover:underline"
                 >
-                  +91 98765 43210
+                  +91 8126499143
                 </a>
               </div>
               <p className="text-sm text-gray-500 dark:text-gray-500 mt-6">

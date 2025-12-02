@@ -9,8 +9,10 @@ export function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center space-x-2 mb-4">
-              <span className="text-orange-600 dark:text-orange-400">✈️</span>
-              <span>tripsiIndia</span>
+              {/* <span className="text-orange-600 dark:text-orange-400">✈️</span>
+              <span>tripsiIndia</span> */}
+              <img src="../../public/images/tripsiindiaLogo.jpg" alt="logo" className="w-10 h-8" />
+
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-sm">
               Discover the incredible beauty and rich cultural heritage of India with our curated travel experiences.
@@ -110,16 +112,16 @@ export function Footer() {
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 mt-1 text-orange-600 dark:text-orange-400 flex-shrink-0" />
                 <span className="text-gray-600 dark:text-gray-400">
-                  123 Travel Street, Mumbai, India
+                  Hauz Khas, New Delhi, India
                 </span>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-orange-600 dark:text-orange-400 flex-shrink-0" />
-                <span className="text-gray-600 dark:text-gray-400">+91 98765 43210</span>
+                <span className="text-gray-600 dark:text-gray-400">+91 8126499143</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-orange-600 dark:text-orange-400 flex-shrink-0" />
-                <span className="text-gray-600 dark:text-gray-400">info@tripsiindia.com</span>
+                <span className="text-gray-600 dark:text-gray-400">Tripsiindia@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -133,21 +135,14 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/17cTbPMpju/"
                 className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="w-5 h-5" />
               </a>
               <a
-                href="#"
-                className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/tripsiindia?igsh=MWhrNGJiczlvazVzMg=="
                 className="text-gray-600 dark:text-gray-400 hover:text-orange-600 dark:hover:text-orange-400 transition-colors"
                 aria-label="Instagram"
               >

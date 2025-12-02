@@ -25,8 +25,9 @@ export function PlaceCard({ place }: PlaceCardProps) {
           <h3 className="text-gray-900 dark:text-white mb-2 group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors">
             {place.name}
           </h3>
+          <h4 className="text-black-900 dark:text-white mb-2 font-bold-900">Starting From: ₹{place.startingRate}</h4>
           <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
-            {place.description}
+            {place.para}
           </p>
           <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
             <div className="flex items-center space-x-1">

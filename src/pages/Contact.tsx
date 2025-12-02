@@ -62,8 +62,8 @@ export function Contact() {
                   <div>
                     <h3 className="text-gray-900 dark:text-white mb-1">Address</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      123 Travel Street<br />
-                      Mumbai, Maharashtra 400001<br />
+                      Hauz Khas<br />
+                      New Delhi, 110016<br />
                       India
                     </p>
                   </div>
@@ -78,8 +78,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-gray-900 dark:text-white mb-1">Phone</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      +91 98765 43210<br />
-                      +91 98765 43211
+                      +91 8126499143
                     </p>
                   </div>
                 </div>
@@ -93,8 +92,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-gray-900 dark:text-white mb-1">Email</h3>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">
-                      info@tripsiindia.com<br />
-                      support@tripsiindia.com
+                      Tripsiindia@gmail.com
                     </p>
                   </div>
                 </div>
@@ -106,7 +104,7 @@ export function Contact() {
                 <div className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
                   <div className="flex justify-between">
                     <span>Monday - Friday:</span>
-                    <span>9:00 AM - 6:00 PM</span>
+                    <span>10:00 AM - 6:00 PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Saturday:</span>
@@ -114,7 +112,7 @@ export function Contact() {
                   </div>
                   <div className="flex justify-between">
                     <span>Sunday:</span>
-                    <span>Closed</span>
+                    <span>10:00 AM - 5:00 PM</span>
                   </div>
                 </div>
               </div>

@@ -1,3 +1,4 @@
+import ladakhImage from '../../public/images/ladakh.jpg';
 export interface Place {
   id: string;
   name: string;
@@ -764,7 +765,7 @@ export const places: Place[] = [
     para: 'The Land of High Passes',
     state: 'Ladakh',
     description: 'Ladakh is a high-altitude desert known for its stunning landscapes, Buddhist monasteries, and adventure opportunities. The region offers breathtaking views of snow-capped mountains, pristine lakes, and unique culture.',
-    image: '../../public/images/ladakh.jpg',
+    image: ladakhImage,
     highlights: ['Pangong Lake', 'Nubra Valley', 'Magnetic Hill', 'Buddhist monasteries'],
     bestTime: 'April to March',
     duration: '5 Nights / 6 Days',

@@ -7,7 +7,7 @@ import darjeelingImage from '../../public/images/darjeeling.jpg';
 import rishikeshImage from '../../public/images/rishikesh.jpg';
 import ladakhImage from '../../public/images/ladakh.jpg';
 import varanasiImage from '../../public/images/varanasi.jpg';
-import keralaBackwatersImage from '../../public/images/kerala.jpg';
+import keralaBackwatersImage from '../../public/images/kerala-backwaters.jpg';
 import jaipurImage from '../../public/images/jaipur.jpg';
 import himachalBackpackingImage from '../../public/images/himachal-backpacking.jpg';
 import himachalHoneymoonPocketImage from '../../public/images/himachal-honeymoon-pocket.jpg';

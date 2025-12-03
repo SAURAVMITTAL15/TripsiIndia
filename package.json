@@ -1,6 +1,7 @@
 {
       "name": "TripsiIndia",
       "version": "0.1.0",
+      "type": "module",
       "private": true,
       "dependencies": {
             "@emailjs/browser": "^4.4.1",
@@ -55,6 +56,9 @@
       },
       "scripts": {
             "dev": "vite",
-            "build": "vite build"
+            "build": "vite build",
+            "build:dev": "vite build --mode development",
+            "lint": "eslint .",
+            "preview": "vite preview"
       }
 }
